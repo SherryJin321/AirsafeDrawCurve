@@ -74,8 +74,7 @@ namespace AirsafeDrawCurve
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 TargetDataTable=ExcelToDataTable(openFileDialog.FileName,false);
-                GenerateArrayData();
-                                
+                GenerateArrayData();                                
                 DrawChannelFive();
                 DrawChannelSix();
                 DrawChannelSeven();
@@ -331,7 +330,8 @@ namespace AirsafeDrawCurve
             }
         }
         #endregion
-        
+
+        #region 显示8条曲线        
         //显示通道1
         private void SelectChannelOne_Click(object sender, RoutedEventArgs e)
         {
@@ -427,5 +427,6 @@ namespace AirsafeDrawCurve
                 DrawChannelEight();
             }
         }
+        #endregion
     }
 }
